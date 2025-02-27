@@ -93,6 +93,8 @@ namespace Azure.Communication
                 TeamsAppDodCloud => new MicrosoftTeamsAppIdentifier(suffix, CommunicationCloudEnvironment.Dod),
                 _ => new UnknownIdentifier(rawId),
             };
+            // if 8:acs:[3 guids] -> goes to new identifier for OPS
+            //update serializer too
         }
     }
 }
